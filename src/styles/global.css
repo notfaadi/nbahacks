@@ -212,9 +212,9 @@ body {
 .hero-video-wrap--deluxe .hero-video-tint {
   background: linear-gradient(
     90deg,
-    rgba(8, 6, 15, 0.58) 0%,
-    rgba(8, 6, 15, 0.22) 28%,
-    transparent 42%
+    rgba(8, 6, 15, 0.52) 0%,
+    rgba(8, 6, 15, 0.18) 26%,
+    transparent 40%
   );
   mix-blend-mode: normal;
   opacity: 1;
@@ -222,6 +222,7 @@ body {
 }
 
 .hero-video-wrap--deluxe .hero-video-tint-glow {
+  background: none;
   opacity: 0;
 }
 

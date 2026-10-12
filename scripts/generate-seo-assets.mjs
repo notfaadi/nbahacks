@@ -34,6 +34,7 @@ async function exists(path) {
 }
 
 const requiredBattlelog = [
+  join(mediaDir, 'nba2k27-hero-deluxe.webp'),
   join(mediaDir, 'nba2k27-hero-full.webp'),
   join(mediaDir, 'nba2k27-cover.webp'),
   join(mediaDir, 'nba2k27-box.jpg'),
@@ -105,7 +106,7 @@ function loadForumMeta(src) {
   }))
 }
 
-const heroFull = join(mediaDir, 'nba2k27-hero-full.webp')
+const heroFull = join(mediaDir, 'nba2k27-hero-deluxe.webp')
 const coverArt = join(mediaDir, 'nba2k27-cover.webp')
 const espGif = join(mediaDir, 'nba2k27-court-vision-gameplay.gif')
 const menuGif = join(mediaDir, 'nba2k27-menu.gif')

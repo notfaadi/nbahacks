@@ -39,7 +39,7 @@ export function HomePage() {
       <section id="home" className="relative flex min-h-screen flex-col overflow-x-clip">
         <VideoBg
           variant="deluxe"
-          image="/media/nba2k27-hero-full.webp"
+          image="/media/nba2k27-hero-deluxe.webp"
           imageAlt="NBA 2K27 Deluxe Edition — Caitlin Clark hero cover"
         />
 

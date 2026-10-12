@@ -28,7 +28,7 @@ const HREFLANG = [
   'x-default',
 ]
 
-const HERO_FULL = '/media/nba2k27-hero-full.webp'
+const HERO_FULL = '/media/nba2k27-hero-deluxe.webp'
 const COVER = '/media/nba2k27-cover.webp'
 const BOX = '/media/nba2k27-box.jpg'
 const ESP = '/media/nba2k27-court-vision-gameplay.gif'

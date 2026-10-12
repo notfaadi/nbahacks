@@ -9,8 +9,8 @@ export type SeoMediaItem = {
 }
 
 /** NBA 2K27 product art + menu stills (self-hosted). */
-export const NBA2K27_HERO = '/media/nba2k27-hero-full.webp'
-export const NBA2K27_SOLDIER = '/media/nba2k27-hero-full.webp'
+export const NBA2K27_HERO = '/media/nba2k27-hero-deluxe.webp'
+export const NBA2K27_SOLDIER = '/media/nba2k27-hero-deluxe.webp'
 export const NBA2K27_COVER = '/media/nba2k27-cover.webp'
 export const NBA2K27_BOX = '/media/nba2k27-box.jpg'
 export const NBA2K27_ESP = '/media/nba2k27-court-vision-gameplay.gif'
