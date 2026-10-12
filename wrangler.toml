@@ -6,10 +6,10 @@ compatibility_date = "2026-09-12"
 
 # Cloudflare CI invokes `npx wrangler deploy` directly. Build Astro first so
 # the static-assets directory exists before Wrangler validates it.
+workers_dev = true
+
 [build]
 command = "npm run build && node scripts/ensure-www-dns.mjs"
-
-workers_dev = true
 
 [vars]
 CANONICAL_HOST = "nba2k27hack.org"
@@ -17,11 +17,11 @@ CANONICAL_HOST = "nba2k27hack.org"
 # Apex + www on Cloudflare zone (www → apex 301 in workers/site.js)
 [[routes]]
 pattern = "nba2k27hack.org/*"
-custom_domain = true
+zone_name = "nba2k27hack.org"
 
 [[routes]]
 pattern = "www.nba2k27hack.org/*"
-custom_domain = true
+zone_name = "nba2k27hack.org"
 
 [assets]
 directory = "./dist"
