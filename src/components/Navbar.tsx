@@ -6,6 +6,7 @@ import { SITE_NAME } from '../data/site'
 
 /** Lean nav — Reviews stay in footer. */
 const NAV_LINKS = [
+  { label: 'Blog', to: '/blog' },
   { label: 'Forums', to: '/forums' },
   { label: 'Product', to: '/nba2k27-cheats' },
   { label: 'Reviews', to: '/reviews' },
@@ -17,7 +18,7 @@ type NavbarProps = {
   onVideo?: boolean
 }
 
-export function Navbar({ onVideo: _onVideo = false }: NavbarProps) {
+export function Navbar({ onVideo = false }: NavbarProps) {
   const [menuOpen, setMenuOpen] = useState(false)
 
   useEffect(() => {
@@ -27,25 +28,29 @@ export function Navbar({ onVideo: _onVideo = false }: NavbarProps) {
     }
   }, [menuOpen])
 
-  const brandClass = 'text-z-ink'
+  const brandClass = onVideo ? 'text-white' : 'text-z-ink'
+  const linkClass = onVideo
+    ? 'text-white/65 hover:bg-white/10 hover:text-white'
+    : 'text-z-ink/70 hover:bg-z-accent/15 hover:text-z-ink'
+  const chipClass = onVideo ? 'nav-chip nav-chip--hero' : 'nav-chip'
 
   return (
     <>
       <nav className="page-x relative z-20 flex items-center justify-between gap-3 py-4 sm:py-5">
         <a href="/" className="flex min-w-0 items-center gap-2.5">
-          <LogoMark className={`${brandClass} shrink-0 text-z-soft`} />
+          <LogoMark className={`${onVideo ? 'text-z-soft' : brandClass} shrink-0`} />
           <span className={`truncate text-sm font-semibold tracking-tight sm:text-base ${brandClass}`}>
             {SITE_NAME}
           </span>
         </a>
 
         <div className="hidden items-center gap-2 md:flex">
-          <div className="nav-chip flex items-center gap-0.5 rounded-full px-1 py-1">
+          <div className={`${chipClass} flex items-center gap-0.5 rounded-full px-1 py-1`}>
             {NAV_LINKS.map((link) => (
               <a
                 key={link.label}
                 href={link.to}
-                className="inline-flex items-center rounded-full px-3.5 py-1.5 text-sm font-medium text-z-ink/70 transition-colors hover:bg-z-accent/15 hover:text-z-ink"
+                className={`inline-flex items-center rounded-full px-3.5 py-1.5 text-sm font-medium transition-colors ${linkClass}`}
               >
                 {link.label}
               </a>
@@ -60,7 +65,11 @@ export function Navbar({ onVideo: _onVideo = false }: NavbarProps) {
           type="button"
           aria-label={menuOpen ? 'Close menu' : 'Open menu'}
           onClick={() => setMenuOpen((v) => !v)}
-          className="relative z-50 flex h-10 w-10 items-center justify-center rounded-full border border-z-soft/25 bg-z-elevated/80 text-z-ink backdrop-blur-lg md:hidden"
+          className={`relative z-50 flex h-10 w-10 items-center justify-center rounded-full border backdrop-blur-lg md:hidden ${
+            onVideo
+              ? 'border-white/20 bg-black/35 text-white'
+              : 'border-z-soft/25 bg-z-elevated/80 text-z-ink'
+          }`}
         >
           <Menu
             className={`absolute h-5 w-5 transition-all duration-300 ${brandClass} ${

@@ -7,7 +7,7 @@ const DEV_SITE = 'http://localhost:5174'
 
 /** Production: HTTPS apex. Local dev: Astro on :5174. */
 export const SITE_URL = import.meta.env.DEV ? DEV_SITE : CANONICAL_SITE
-export const SITE_NAME = 'NBA Hacks 2K27'
+export const SITE_NAME = 'NBA 2K27 Hacks'
 export const SITE_HOST = import.meta.env.DEV ? 'localhost:5174' : 'nba2k27hack.org'
 
 /**
@@ -127,7 +127,8 @@ export const SEO = {
 } as const satisfies Record<string, PageSeo>
 
 export const HOME_HEADINGS = {
-  h1: 'NBA Hacks 2K27 – Cheats, Tips, Builds & VC Glitches',
+  h1: 'nba2k27 hacks',
+  h1Sub: 'undetected cheats for nba2k27',
   h2Features: 'NBA 2K27 Auto Green, ESP, MyTeam card & badge overlay & court radar',
   h2Featured: 'NBA 2K27 Court Vision and Auto Green & perfect shot timing',
   h2About: 'Clear 2K Anti-Cheat status before you buy NBA 2K27 cheats',

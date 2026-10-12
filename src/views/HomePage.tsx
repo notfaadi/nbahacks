@@ -7,7 +7,7 @@ import { FaqSection } from '../components/FaqSection'
 import { guidePath } from '../data/games'
 import { CheckoutLink } from '../components/CheckoutLink'
 import { HOME_FAQS } from '../data/faqs'
-import { HOME_HEADINGS, SEO, SITE_NAME, SITE_PURPOSE } from '../data/site'
+import { HOME_HEADINGS, SITE_NAME, SITE_PURPOSE } from '../data/site'
 import { BLOGS, blogPath } from '../data/blogs'
 
 const FEATURES = [
@@ -38,8 +38,9 @@ export function HomePage() {
     <div className="min-h-screen overflow-x-hidden text-white">
       <section id="home" className="relative flex min-h-screen flex-col overflow-x-clip">
         <VideoBg
+          variant="deluxe"
           image="/media/nba2k27-hero-full.webp"
-          imageAlt="NBA 2K27 cheats Auto Green and ESP product artwork"
+          imageAlt="NBA 2K27 Deluxe Edition — Caitlin Clark hero cover"
         />
 
         <div className="relative z-20 flex min-h-screen flex-col">
@@ -47,23 +48,23 @@ export function HomePage() {
 
           <main className="page-x mt-auto pb-6 sm:pb-8 lg:pb-10">
             <div className="flex flex-col gap-5 sm:gap-6 lg:flex-row lg:items-end lg:justify-between lg:gap-10">
-              <div className="relative z-30 max-w-md lg:max-w-lg">
-                <h1 className="text-[1.75rem] font-semibold leading-[1.12] tracking-tight text-white sm:text-4xl lg:text-[2.65rem] lg:leading-[1.1]">
+              <div className="relative z-30 max-w-md lg:max-w-xl">
+                <h1 className="text-3xl font-bold uppercase leading-[1.05] tracking-tight text-white sm:text-5xl lg:text-6xl">
                   {HOME_HEADINGS.h1}
                 </h1>
-                <p className="mt-3 max-w-md text-sm leading-relaxed text-white/70 sm:mt-3.5 sm:text-[0.95rem]">
-                  {SEO.home.description} PC cheats, VC glitches, meta builds, and patch-ready guides in one hub.
+                <p className="mt-2 text-xl font-bold uppercase leading-[1.1] tracking-tight text-z-soft sm:mt-3 sm:text-3xl lg:text-4xl">
+                  {HOME_HEADINGS.h1Sub}
                 </p>
 
                 <div className="relative z-50 mt-5 flex flex-col gap-2.5 sm:flex-row sm:items-center">
                   <CheckoutLink className="cta-gradient inline-flex items-center justify-center rounded-full px-6 py-2.5 text-sm font-semibold text-white transition-opacity hover:opacity-90">
-                    Buy NBA 2K27 Cheats
+                    Buy now
                   </CheckoutLink>
                   <a
                     href={guidePath('nba2k27')}
                     className="inline-flex items-center justify-center rounded-full border border-z-soft/35 bg-[rgba(28,22,48,0.88)] px-5 py-2.5 text-sm font-semibold text-white shadow-[inset_0_1px_0_rgba(255,255,255,0.1)] backdrop-blur-xl transition-[background-color,border-color] hover:border-z-soft/50 hover:bg-[rgba(36,28,58,0.95)]"
                   >
-                    Product details
+                    View product
                   </a>
                 </div>
               </div>
@@ -77,7 +78,7 @@ export function HomePage() {
                     UD
                   </p>
                   <p className="mt-2.5 text-xs leading-relaxed text-white/70 sm:mt-3 sm:text-sm">
-                    Live 2K Anti-Cheat status for NBA 2K27. Updated after patches —
+                    Live patch compatibility status for NBA 2K27. Updated after patches —
                     not random Discord screenshots.
                   </p>
                 </div>
@@ -85,13 +86,13 @@ export function HomePage() {
                 <div className="glass flex h-full min-h-[140px] flex-col rounded-2xl p-4 sm:min-h-[160px] sm:p-5">
                   <div className="mb-2.5 flex items-center gap-2 sm:mb-3">
                     <div className="flex h-5 w-5 items-center justify-center rounded bg-z-accent/30 text-[10px] font-bold text-z-soft sm:h-6 sm:w-6 sm:text-xs">
-                      DZ
+                      2K
                     </div>
                     <span className="text-sm font-semibold text-white">NBA 2K27</span>
                   </div>
                   <p className="flex-1 text-xs leading-relaxed text-white/80 sm:text-sm">
-                    “Bought it for ESP and mild perfect shot timing. Status stayed honest after the last
-                    2K Anti-Cheat rebuild — finally an honest status shop.”
+                    “Bought it for auto green and unlock all gear. Updates landed fast after the last NBA
+                    2K27 patch — finally an honest shop.”
                   </p>
                   <div className="mt-3 flex items-center gap-2.5 sm:mt-4 sm:gap-3">
                     <div className="flex h-8 w-8 items-center justify-center rounded-full bg-z-accent/25 text-xs font-semibold text-z-ink sm:h-9 sm:w-9 sm:text-sm">
@@ -99,7 +100,7 @@ export function HomePage() {
                     </div>
                     <div>
                       <p className="text-sm font-semibold text-white">jayk</p>
-                      <p className="text-xs text-white/60">NBA 2K27 player</p>
+                      <p className="text-xs text-white/60">Pro player</p>
                     </div>
                   </div>
                 </div>
